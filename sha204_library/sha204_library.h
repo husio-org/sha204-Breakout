@@ -294,13 +294,13 @@ private:
 	uint8_t sha204p_receive_response(uint8_t size, uint8_t *response);
 	uint8_t sha204p_wakeup();
 	uint8_t sha204p_send_command(uint8_t count, uint8_t * command);
-	uint8_t sha204p_sleep();
 	uint8_t sha204p_resync(uint8_t size, uint8_t *response);
 	
 
 public:
 	atsha204Class(uint8_t pin);	// Constructor
 	uint8_t sha204c_wakeup(uint8_t *response);
+	uint8_t sha204p_sleep();
 	uint8_t sha204c_send_and_receive(uint8_t *tx_buffer, uint8_t rx_size, uint8_t *rx_buffer, uint8_t execution_delay, uint8_t execution_timeout);
 	uint8_t sha204c_resync(uint8_t size, uint8_t *response);	
 	uint8_t sha204m_random(uint8_t * tx_buffer, uint8_t * rx_buffer, uint8_t mode);
